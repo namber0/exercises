@@ -1,3 +1,6 @@
-str = input("enter string: ")
+def strlen():
+    str = input("enter string: ")
 
-print(len(str))
+    print(len(str))
+
+strlen()
