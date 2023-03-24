@@ -1,4 +1,5 @@
 def convert_currency(euro):
     return euro * 1.09
 
-print(convert_currency(8))
+euro = float(input("enter euros: "))
+print(convert_currency(euro))
