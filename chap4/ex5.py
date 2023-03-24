@@ -4,5 +4,5 @@ def sum_first_int(n):
         sum += i
     print(sum)
 
-
-sum_first_int(5)
+inp = int(input("enter positive integer: "))
+sum_first_int(inp)
