@@ -1,5 +1,5 @@
 def american_grades(grade):
-    if grade > 10 or grade < 0:
+    if grade > 10 or grade < 0 or grade % 0.5 != 0:
         print('Wrong value')
         return ''
     if grade >= 8.5 and grade <= 10:
@@ -14,7 +14,7 @@ def american_grades(grade):
         return 'F'
     
 while True:
-        grade = int(input('enter your grade: '))
+        grade = float(input('enter your grade: '))
         if american_grades(grade) != '':
              break
 
