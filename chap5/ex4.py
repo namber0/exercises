@@ -4,7 +4,7 @@ reference = {
 
 month = int(input('enter a month: '))
 
-while month > 12 or month <= 0:
+if month not in reference:
     print("that's not a month of the year")
     month = int(input('enter a month: '))
 
