@@ -39,7 +39,7 @@ for i in range(len(array)):
     array[i] = num
 
 
-print(array)
+print(list(array))
 print('\nthe max number of the array is', maximum(array))
 print('the min number of the array is', minimum(array))
 print('the number of dividiables of 50 in the array is', dividables(array, 50))
