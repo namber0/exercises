@@ -39,6 +39,8 @@ for i in range(len(array)):
     array[i] = num
 
 
+
+
 print(list(array))
 print('\nthe max number of the array is', maximum(array))
 print('the min number of the array is', minimum(array))
