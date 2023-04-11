@@ -5,7 +5,6 @@ def bubbleSort(array):
                 array[j], array[j+1] = array[j+1], array[j];
     return array;
 
-
 def reverseList(array):
     return array[::-1];
 
