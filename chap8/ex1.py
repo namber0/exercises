@@ -11,8 +11,8 @@ def reverseList(array):
 def contain5(array):
     for i in array:
         if i == 5:
-            return "Yes";
-    return "No";
+            return "yes";
+    return "no";
 
 def numberOf5s(array):
     count = 0;
@@ -22,7 +22,7 @@ def numberOf5s(array):
     return count;
 
 def removeFirstAndLast(array):
-    return bubbleSort(array[1:len(array) - 1]);
+    return bubbleSort(array[1:-1]);
 
 def lessThan5(array):
     count = 0;

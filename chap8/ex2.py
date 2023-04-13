@@ -1,18 +1,26 @@
 import random
 
-def secondLargest(arr):
-    large = arr[0];
+def average(arr):
+    sums = 0;
     for i in arr:
-        if i > large and i < max(arr):
-            large = i;
-    return large;
+        sums += i;
+    return int(sums / len(arr));
+
+def secondLargest(arr):
+    maxi = max(arr);
+    index = arr.index(maxi);
+    arr.remove(maxi);
+    scndMax = max(arr);
+    arr.insert(index, maxi);
+    return scndMax;
 
 def secondSmallest(arr):
-    small = arr[0];
-    for i in arr:
-        if i < small and i > min(arr):
-            small = i;
-    return small;
+    mini = min(arr);
+    index = arr.index(mini);
+    arr.remove(mini);
+    scndMin = min(arr);
+    arr.insert(index, mini);
+    return scndMin;
 
 def evenNums(arr):
     count = 0;
@@ -23,10 +31,12 @@ def evenNums(arr):
 
 arr = []
 
-for i in range(100):
-    arr.append(random.randint(1,100));
+for i in range(20):
+    arr.append(random.randint(1,101));
 
 print(arr);
+
+print("average of array:", average(arr));
 
 print("largest value:", max(arr));
 print("smallest value:", min(arr));
