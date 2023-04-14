@@ -1,7 +1,7 @@
 from math import e
 
-print('%.5f' % e**-1)
-print('%.5f' % e**0)
-print('%.5f' % e**1)
-print('%.5f' % e**2)
-print('%.5f' % e**3)
+for i in range(-1, 4):
+    if i == 0:
+        print(f'e^0 = %i' % e**0);
+        continue;
+    print(f'e^{i} = %.5f' % e**i);
