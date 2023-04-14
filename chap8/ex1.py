@@ -48,6 +48,6 @@ print("does this list contain number 5:",contain5(arr));
 
 print("dhe number of number 5:", numberOf5s(arr));
 
-print("demoved the first and last element and sorted the list:", removeFirstAndLast(arr));
+print("demoved the first and last element and sorted the list:", bubbleSort(removeFirstAndLast(arr)));
 
 print("number of elements that are less than 5:", lessThan5(arr));
