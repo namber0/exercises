@@ -6,6 +6,8 @@ array = [];
 def rot13(array):
     out = '';
     for letter in array:
+        if letter == ' ':
+            continue
         position = reference.index(letter);
         rotation = (position + 13) % len(array);
         out += reference[rotation] + ' ';
