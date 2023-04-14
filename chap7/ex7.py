@@ -1,16 +1,18 @@
-def maximum(collection):
-    maxNum = collection[0];
+def bubbleSort(collection):
     for i in range(len(collection)):
-        if collection[i] > maxNum:
-            maxNum = collection[i];
-    return maxNum;
+        for j in range(len(collection) - i - 1):
+            if collection[j] > collection[j + 1]:
+                collection[j], collection[j + 1] = collection[j + 1], collection[j];
+
+    return collection;
+
+def maximum(collection):
+    collection = bubbleSort(collection);
+    return collection[-1];
 
 def minimum(collection):
-    minNum = collection[0]
-    for i in range(len(collection)):
-        if collection[i] < minNum:
-            minNum = collection[i];
-    return minNum;
+    collection = bubbleSort(collection);
+    return collection[0];
 
 def sumarize(collection):
     total = 0;
