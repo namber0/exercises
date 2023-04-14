@@ -1,7 +1,8 @@
-def approx_pi(n):
-    pi = 0
+num = int(input("enter a number: "));
+def approxPi(n):
+    pi = 0;
     for i in range(n):
-        pi += ((-1) ** i) / (2 * i + 1)
-    return 4 * pi
+        pi += ((-1) ** i) / (2 * i + 1);
+    print(4 * pi);
 
-print(approx_pi(10))
+approxPi(num);
