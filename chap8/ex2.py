@@ -7,18 +7,20 @@ def average(arr):
     return int(sums / len(arr));
 
 def secondLargest(arr):
-    maxi = max(arr);
+    sets = set(arr);
+    maxi = max(sets);
     index = arr.index(maxi);
     arr.remove(maxi);
-    scndMax = max(arr);
+    scndMax = max(sets);
     arr.insert(index, maxi);
     return scndMax;
 
 def secondSmallest(arr):
-    mini = min(arr);
+    sets = set(arr);
+    mini = min(sets);
     index = arr.index(mini);
     arr.remove(mini);
-    scndMin = min(arr);
+    scndMin = min(sets);
     arr.insert(index, mini);
     return scndMin;
 
