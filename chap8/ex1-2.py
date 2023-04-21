@@ -1,6 +1,6 @@
 import string
 
-reference = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+reference = string.ascii_uppercase;
 array = [];
 
 def rot13andFormat(array):
