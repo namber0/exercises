@@ -9,19 +9,15 @@ def average(arr):
 def secondLargest(arr):
     sets = set(arr);
     maxi = max(sets);
-    index = arr.index(maxi);
-    arr.remove(maxi);
+    sets.remove(maxi);
     scndMax = max(sets);
-    arr.insert(index, maxi);
     return scndMax;
 
 def secondSmallest(arr):
     sets = set(arr);
     mini = min(sets);
-    index = arr.index(mini);
-    arr.remove(mini);
+    sets.remove(mini);
     scndMin = min(sets);
-    arr.insert(index, mini);
     return scndMin;
 
 def evenNums(arr):
