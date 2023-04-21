@@ -3,7 +3,7 @@ import string
 reference = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 array = [];
 
-def rot13(array):
+def rot13andFormat(array):
     out = '';
     for letter in array:
         if letter == ' ':
@@ -19,4 +19,4 @@ for letter in string.ascii_uppercase:
     print(letter, end=' ');
 print('');
 
-print(rot13(array));
+print(rot13andFormat(array));
