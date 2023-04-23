@@ -1,9 +1,34 @@
-def bubbleSort(array):
-    for i in range(len(array)):
-        for j in range(len(array) - i - 1):
-            if array[j] > array[j + 1]:
-                array[j], array[j+1] = array[j+1], array[j];
-    return array;
+def mergeSort(arr):
+    if len(arr) > 1:
+        mid = len(arr) // 2;
+
+        left = arr[:mid];
+        right = arr[mid:];
+        
+        mergeSort(left);
+        mergeSort(right);
+
+        i = j = k = 0;
+
+        while i < len(left) and j < len(right):
+            if left[i] <= right[j]:
+                arr[k] = left[i];
+                i += 1;
+            else:
+                arr[k] = right[j];
+                j += 1;
+            k += 1;
+
+        while i < len(left):
+            arr[k] = left[i];
+            i += 1;
+            k += 1;
+
+        while j < len(right):
+            arr[k] = right[j];
+            j += 1;
+            k += 1;
+    return arr;
 
 def reverseList(array):
     return array[::-1];
@@ -22,7 +47,7 @@ def numberOf5s(array):
     return count;
 
 def removeFirstAndLast(array):
-    return bubbleSort(array[1:-1]);
+    return mergeSort(array[1:-1]);
 
 def lessThan5(array):
     count = 0;
@@ -46,8 +71,8 @@ print("reverse list is:", reverseList(arr));
 
 print("does this list contain number 5:",contain5(arr));
 
-print("dhe number of number 5:", numberOf5s(arr));
+print("the number of number 5:", numberOf5s(arr));
 
-print("demoved the first and last element and sorted the list:", bubbleSort(removeFirstAndLast(arr)));
+print("removed the first and last element and sorted the list:", removeFirstAndLast(arr));
 
 print("number of elements that are less than 5:", lessThan5(arr));

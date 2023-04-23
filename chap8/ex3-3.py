@@ -1,30 +1,37 @@
-import random as rnd
+def months31days():
+    monthsWith31days = [];
+    for keys in reference:
+        if reference[keys] == 31:
+            monthsWith31days.append(keys);
+    return monthsWith31days;
 
-def divAbleBy3711(arr):
-    out = [];
-    for num in arr:
-        if num % 3 == 0 and num % 7 == 0 and num % 11 == 0:
-            out.append(num);
-    return out;
+def keyValueSorted(reference):
+    sortedDict = sorted(reference.items(), key=lambda x:x[1]);
+    return sortedDict;
 
-def divAble37Not11(arr):
-    out = [];
-    for num in arr:
-        if num % 3 == 0 and num % 7 == 0 and num % 11 != 0:
-            out.append(num);
-    return out;
+reference = {
+    'january':31,
+    'february':28,
+    'march':31,
+    'april':30,
+    'may':31,
+    'june':30,
+    'july':31,
+    'august':31,
+    'september':30,
+    'october':31,
+    'november':30,
+    'december':31
+}
 
-def notDivAbleTo3711(arr):
-    out = [];
-    for num in arr:
-        if num % 3 != 0 and num % 7 != 0 and num % 11 != 0:
-            out.append(num);
-    return out;
+keyList = list(reference.keys());
 
-nums = list(range(1, 1001))
 
-print("the numbers that are dividable by 3, 7, 11:", divAbleBy3711(nums))
-print('')
-print("the numbers that are dividable by 3, 7 but not 11:", divAble37Not11(nums));
-print('')
-print("the numbers that are not dividable by 3, 7, 11:", notDivAbleTo3711(nums));
+usr = input("enter month name: ");
+print(reference[usr.lower()]);
+
+print("keys sorted in alphabetical order:", sorted(keyList));
+
+print("months with 31 days:", months31days());
+
+print("months sorted by days:", keyValueSorted(reference))
