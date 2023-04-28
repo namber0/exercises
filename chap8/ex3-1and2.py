@@ -21,7 +21,7 @@ def enterProductAndPrice(myDict):
 
         myDict[usr1] = usr2;
         finish = input("are you finished? ");
-        if finish.lower() == 'yes':
+        if finish.lower() == 'yes' or finish.lower() == 'y':
             break;
     return myDict;
 
@@ -35,7 +35,7 @@ def getPrice(myDict):
         userKey = input("enter the product you want to check: ");
         print(myDict[userKey]);
         keyFin = input(("are you finished? "));
-        if keyFin.lower() == 'yes':
+        if keyFin.lower() == 'yes' or keyFin.lower() == 'y':
             break;
 
 def getLowerPrice(myDict):
@@ -53,7 +53,7 @@ def getLowerPrice(myDict):
         print(out);
 
         keyFin = input(("are you finished? "));
-        if keyFin.lower() == 'yes':
+        if keyFin.lower() == 'yes' or keyFin.lower() == 'y':
             break;
 
 enterProductAndPrice(myDict);
