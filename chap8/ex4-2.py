@@ -1,5 +1,5 @@
-s1 = 'this is a test';
-s2 = 'this is another test';
+s1 = 'this is undoubtedly right';
+s2 = 'this is indubitably wrong';
 
 out = list(set(s1) & set(s2));
 out.remove(' ');
