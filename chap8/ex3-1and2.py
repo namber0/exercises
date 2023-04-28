@@ -19,7 +19,7 @@ def enterProductAndPrice(myDict):
         print("enter price:", end=' ');
         usr2 = onlyInt();
 
-        myDict[usr1] = usr2;
+        myDict[usr1.lower()] = usr2;
         finish = input("are you finished? ");
         if finish.lower() == 'yes' or finish.lower() == 'y':
             break;
@@ -33,7 +33,7 @@ def getPrice(myDict):
     while True:
         print("all the products in the dict is:", keyList);
         userKey = input("enter the product you want to check: ");
-        print(myDict[userKey]);
+        print(myDict[userKey.lower()]);
         keyFin = input(("are you finished? "));
         if keyFin.lower() == 'yes' or keyFin.lower() == 'y':
             break;

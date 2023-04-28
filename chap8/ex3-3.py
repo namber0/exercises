@@ -26,7 +26,6 @@ reference = {
 
 keyList = list(reference.keys());
 
-
 usr = input("enter month name: ");
 print(reference[usr.lower()]);
 
