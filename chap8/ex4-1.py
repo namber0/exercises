@@ -7,7 +7,10 @@ def symetric_difference(set1, set2):
                 break;
     return out;
 
-arr1 = ['A', 'B', 'C', 'j', 'e', 'z', 'w'];
-arr2 = ['B', 'C', 'D', 'i', 'r', 'e', 'q', 'w', 't'];
+set1 = {'A', 'B', 'C', 'j', 'e', 'z', 'w', 'A'};
+set2 = {'B', 'C', 'D', 'i', 'r', 'e', 'q', 'w', 't'};
+set3 = {'b', 'a', 'e', 'B'}
 
-print(symetric_difference(arr1, arr2))
+print(set1, type(set1))
+print(set1.intersection(set2, set3))
+print(symetric_difference(set1, set2))

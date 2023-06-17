@@ -1,5 +1,3 @@
-import random as rnd
-
 def divAbleBy3711(arr):
     out = [];
     for num in arr:
